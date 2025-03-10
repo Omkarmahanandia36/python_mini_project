@@ -1,0 +1,39 @@
+def add(num1 ,num2):
+    return num1+num2
+def sub(num1 ,num2):
+    return num1-num2
+def mult(num1 ,num2):
+    return num1*num2
+def div(num1 ,num2):
+    if num2==0:
+        return "Error ! divison by zero !"
+    return num1/num2
+while True:
+    print("1. addition \n"
+          "2. Subtraction \n"
+          "3. Multiplication \n"
+          "4. Division\n")
+    choice = int(input("Enter choice (1/2/3/4): "))
+    if choice in (1,2,3,4):
+        try:
+            num1=float(input("Enter First number : "))
+            num2=float(input("Enter Second number : "))
+            if choice== 1:
+                print(num1 ,"+" ,num2 ,"= ",add(num1 , num2))
+
+            elif choice==2:
+                print(num1, "-", num2,"= ", sub(num1, num2))
+            elif choice==3:
+                print(num1, "*", num2,"= ",mult(num1, num2))
+            elif choice==4:
+                print(num1, "%", num2,"= ",div(num1, num2))
+        except ValueError:
+            continue
+
+    else:
+        print("invalid number")
+
+
+
+
+
